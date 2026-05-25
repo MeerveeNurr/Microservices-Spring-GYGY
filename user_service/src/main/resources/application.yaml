@@ -1,4 +1,7 @@
 spring:
   application: 
-    name:user_service
+    name: user_service
+
+server:
+   port: 0
     
