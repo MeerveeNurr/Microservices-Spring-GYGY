@@ -3,5 +3,5 @@ spring:
     name: user_service
 
 server:
-   port: 0
+   port: 8084
     

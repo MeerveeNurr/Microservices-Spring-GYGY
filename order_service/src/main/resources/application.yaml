@@ -3,4 +3,4 @@ spring:
    name: order_service
 
 server:
-    port: 0
+    port: 8082

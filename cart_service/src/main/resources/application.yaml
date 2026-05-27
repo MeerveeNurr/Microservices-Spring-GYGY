@@ -3,4 +3,4 @@ spring:
    name: cart_service
 
 server:
-    port: 0
+    port: 8081
