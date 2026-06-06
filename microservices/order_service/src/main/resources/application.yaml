@@ -2,5 +2,22 @@ spring:
   application:
    name: order_service
 
+  cloud:
+    stream:
+      bindings:
+        testEvent-out-0:
+          destination: test-topic # hangi başlığa bu eventi göndereyim? burası doğru mu ?
+          content-type: application/json # hangi tür ile göndereyim?
+      kafka:
+        binder:
+          brokers: localhost:9092 
+  datasource:
+    url: jdbc:postgresql://localhost:5435/orders
+    username: postgres
+    password: test12345
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
 server:
     port: 8082

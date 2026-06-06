@@ -2,6 +2,25 @@ spring:
   application: 
     name: user_service
 
+  cloud:
+    function:
+      definition: consumerTestEvent
+    stream:
+      bindings:
+        consumerTestEvent-in-0: #mesajı alan taraf olduğu için in-0
+          destination: test-topic # hangi başlıktan bu eventi dinleyeyim?
+          group: user-service-group # hangi grup olarak dinliyorum?
+      kafka:
+        binder:
+          brokers: localhost:9092
+  datasource:
+    url: jdbc:postgresql://localhost:5434/users
+    username: postgres
+    password: test12345
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
 server:
    port: 8085
 
