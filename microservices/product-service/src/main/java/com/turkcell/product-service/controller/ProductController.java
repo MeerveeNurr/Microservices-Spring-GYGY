@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.turkcell.product_service.entity.OutboxEvent;
 import com.turkcell.product_service.entity.OutboxStatus;
+import com.turkcell.product_service.entity.TestClass;
 import com.turkcell.product_service.event.TestEvent;
 import com.turkcell.product_service.repository.OutboxRepository;
 
@@ -62,7 +63,11 @@ public class ProductController {
         return "Başarılı";
 
     }
-    // toJson -> event'i JSON formatına çevirir. Bu, Kafka'ya gönderirken kullanışlı olacaktır.
+    @GetMapping("/test")
+    public TestClass test2(){
+        return new TestClass("Product Service Test Başarılı...");
+    }
+      // toJson -> event'i JSON formatına çevirir. Bu, Kafka'ya gönderirken kullanışlı olacaktır.
     //Aşağıda yapılan toJson metodu, herhangi bir nesneyi JSON formatına çevirebilir. ObjectMapper sınıfı, Jackson kütüphanesinin bir parçasıdır ve Java nesnelerini JSON formatına çevirmek için kullanılır.
      private String toJson(Object o)
     {

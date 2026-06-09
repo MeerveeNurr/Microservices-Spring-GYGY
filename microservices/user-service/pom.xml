@@ -11,16 +11,16 @@
         <relativePath>../pom.xml</relativePath>
     </parent>
 
-    <artifactId>product_service</artifactId>
-    <name>product_service</name>
-    <description>Product Service</description>
+    <artifactId>user-service</artifactId>
+    <name>user-service</name>
+    <description>User Service</description>
 
     <dependencies>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
         </dependency>
-        <dependency>
+         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-stream-kafka</artifactId>
         </dependency>
@@ -33,7 +33,12 @@
             <artifactId>postgresql</artifactId>
             <scope>runtime</scope>
         </dependency>
+         <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>

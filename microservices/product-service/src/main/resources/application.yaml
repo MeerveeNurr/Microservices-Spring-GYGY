@@ -1,6 +1,6 @@
 spring:
   application:
-    name: product_service
+    name: product-service
   cloud:
     stream:
       bindings:
@@ -20,4 +20,4 @@ spring:
       ddl-auto: update
 
 server:
-  port: 8083
+  port: 8084

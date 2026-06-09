@@ -18,8 +18,8 @@
     <name>microservices</name>
 
     <modules>
-        <module>user_service</module>
-        <module>product_service</module>
+        <module>user-service</module>
+        <module>product-service</module>
          <module>cart_service</module>
         <module>order_service</module>
         <module>eureka_server</module>
