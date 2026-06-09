@@ -1,4 +1,5 @@
 management:
-    endpoints:
+  endpoints:
+    web:
       exposure:
         include: "*"
