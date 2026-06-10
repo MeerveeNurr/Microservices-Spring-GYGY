@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5433/products
+    username: postgres
+    password: test12345
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+  cloud:
+    function:
+      definition: consumerTestEvent
+    stream:
+      bindings:
+        consumerTestEvent-in-0:
+          destination: test-topic
+          group: user-service-group

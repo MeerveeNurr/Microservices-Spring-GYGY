@@ -1,0 +1,5 @@
+ datasource:
+    url: jdbc:postgresql://prod.turkcell.com:5434/users
+    username: postgres
+    password: turkcellprod12345
+    driver-class-name: org.postgresql.Driver

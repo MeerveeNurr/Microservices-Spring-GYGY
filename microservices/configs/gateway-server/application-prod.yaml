@@ -1,0 +1,30 @@
+server:
+  port: 80 
+spring:
+  cloud:
+    gateway:
+      server:
+        webmvc:
+          routes:
+            - id: product-service
+              uri: lb://PRODUCT-SERVICE
+              predicates:
+                - Path=/products/**
+            - id: cart_service
+              uri: lb://CART-SERVICE
+              predicates:
+                - Path=/carts/**
+            - id: order_service
+              uri: lb://ORDER-SERVICE
+              predicates:
+                - Path=/orders/**
+            - id: user-service
+              uri: lb://USER-SERVICE
+              predicates:
+                - Path=/api/users/**
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    fetch-registry: true
+    register-with-eureka: true
